@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -19,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins"
-            android:text="Add Note."
+            android:text="@string/TittleNote"
             android:textColor="@color/red"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -30,9 +29,11 @@
             android:layout_height="60dp"
             android:layout_below="@id/addNoteHeading"
             android:layout_marginTop="16dp"
+            android:autofillHints=""
             android:background="@drawable/pink_border"
             android:fontFamily="@font/poppins"
-            android:hint="Enter the title"
+            android:hint="@string/EnterTittle"
+            android:inputType="none"
             android:maxLines="1"
             android:padding="12dp"
             android:textSize="20sp" />
@@ -40,15 +41,78 @@
         <EditText
             android:id="@+id/addNoteDesc"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/addNoteTitle"
             android:layout_marginTop="12dp"
+            android:autofillHints=""
             android:background="@drawable/pink_border"
             android:fontFamily="@font/poppins"
             android:gravity="top"
-            android:hint="Enter the description"
+            android:hint="@string/Description"
+            android:inputType="none"
             android:padding="12dp"
             android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/addNotePriority"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/addNoteDesc"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:entries="@array/priority_options"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/addNoteStatus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/addNotePriority"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:entries="@array/status_options"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/addNoteLabels"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/addNoteStatus"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:entries="@array/label_options"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/addNoteStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addNoteLabels"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:hint="Start Date"
+            android:inputType="none"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:focusable="false" />
+
+        <EditText
+            android:id="@+id/addNoteEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addNoteStartDate"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:hint="End Date"
+            android:inputType="none"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:focusable="false" />
+
+
 
     </RelativeLayout>
 </layout>

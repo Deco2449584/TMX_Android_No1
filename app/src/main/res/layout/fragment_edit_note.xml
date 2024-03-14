@@ -39,7 +39,7 @@
         <EditText
             android:id="@+id/editNoteDesc"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Enter the description"
             android:gravity="top"
             android:padding="12dp"
@@ -62,6 +62,63 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
             android:contentDescription="editFab" />
+        <Spinner
+            android:id="@+id/editNotePriority"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editNoteDesc"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:entries="@array/priority_options"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
 
+        <Spinner
+            android:id="@+id/editNoteStatus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editNotePriority"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:entries="@array/status_options"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/editNoteLabels"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editNoteStatus"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:entries="@array/label_options"
+            android:padding="12dp"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/editNoteStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteLabels"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:hint="Start Date"
+            android:inputType="none"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:focusable="false" />
+
+        <EditText
+            android:id="@+id/editNoteEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNoteStartDate"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pink_border"
+            android:hint="End Date"
+            android:inputType="none"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:focusable="false" />
     </RelativeLayout>
 </layout>

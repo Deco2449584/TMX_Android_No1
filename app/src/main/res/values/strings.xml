@@ -3,5 +3,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="save">Save</string>
+    <string name="TittleNote">Añadir Nota</string>
+    <string name="EnterTittle">Ingrese el Titulo</string>
+
+    <string name="Description">Ingrese la Descripcion</string>
+
+
 </resources>
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="priority_options">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Critical</item>
+    </string-array>
+    <string-array name="status_options">
+        <item>Pending</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+    </string-array>
+    <string-array name="label_options">
+        <item>Personal</item>
+        <item>Trabajo</item>
+        <item>Estudio</item>
+        <item>Tareas</item>
+        <item>Recordatorios</item>
+        <item>Proyectos</item>
+        <item>Compras</item>
+        <item>Salud</item>
+        <item>Finanzas</item>
+        <item>Ocio</item>
+    </string-array>
+</resources>

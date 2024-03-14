@@ -35,6 +35,7 @@ interface NoteDao {
     @Query("SELECT * FROM notes WHERE startDate >= :startDate AND endDate <= :endDate")
     fun getNotesByDateRange(startDate: Long, endDate: Long): LiveData<List<Note>>
 
-    @Query("SELECT * FROM notes WHERE :label IN labels")
+   @Query("SELECT * FROM notes WHERE labels LIKE :label")
     fun getNotesByLabel(label: String): LiveData<List<Note>>
+
 }

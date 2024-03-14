@@ -23,7 +23,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
             return oldItem == newItem
         }
     }
-    private val differ = AsyncListDiffer(this, differCallback)
+    val differ = AsyncListDiffer(this, differCallback)
 
     fun submitList(list: List<Note>) {
         differ.submitList(list)

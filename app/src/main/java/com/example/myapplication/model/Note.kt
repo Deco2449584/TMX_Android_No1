@@ -4,6 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parceler
 import kotlinx.parcelize.Parcelize
 
 @Entity(tableName = "notes")
@@ -23,7 +24,11 @@ data class Note(
         return 0
     }
 
-    override fun writeToParcel(dest: Parcel, flags: Int) {
-        TODO("Not yet implemented")
+    companion object : Parceler<Note> {
+        override fun Note.write(dest: Parcel, flags: Int) {
+            TODO("Not yet implemented")
+        }
+
+        override fun create(parcel: Parcel): Note = TODO()
     }
 }

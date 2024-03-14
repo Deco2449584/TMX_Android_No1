@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 
 class NoteViewModel(app: Application, private val noteRepository: NoteRepository): AndroidViewModel(app){
 
+    // Métodos existentes para operaciones CRUD
     fun addNote(note: Note) =
         viewModelScope.launch {
             noteRepository.insertNote(note)
@@ -24,8 +25,24 @@ class NoteViewModel(app: Application, private val noteRepository: NoteRepository
         viewModelScope.launch {
             noteRepository.updateNote(note)
         }
+
+    // Métodos para obtener notas por diferentes criterios
     fun getAllNotes() = noteRepository.getAllNotes()
 
     fun searchNote(query: String) =
         noteRepository.searchNotes(query)
+
+    fun getNotesByPriority(priority: Int) =
+        noteRepository.getNotesByPriority(priority)
+
+    fun getNotesByStatus(status: String) =
+        noteRepository.getNotesByStatus(status)
+
+    fun getNotesByDateRange(startDate: Long, endDate: Long) =
+        noteRepository.getNotesByDateRange(startDate, endDate)
+
+    fun getNotesByLabel(label: String) =
+        noteRepository.getNotesByLabel(label)
+
+
 }
